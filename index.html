@@ -39,31 +39,36 @@
               </div>
             </div>
           </form>
-          <h1 id="city">Sydney NSW, Australia</h1>
-          <ul>
-            <li id="date">Wed 20:20</li>
-            <li>Partly Cloudy</li>
-          </ul>
-          <div class="row">
-            <div class="col-6">
-              <div class="clearfix">
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                  alt="Cloudy icon"
-                  class="weather-icon float-left"
-                />
-                <div class="float-left">
-                  <span class="temperature">19</span
-                  ><span class="units">°C | <a href="#">°F</a></span>
+          <div id="weather-display">
+            <h1 id="city">London</h1>
+            <ul>
+              <li id="date">Wed 20:20</li>
+              <li id="condition">Partly Cloudy</li>
+            </ul>
+            <div class="row">
+              <div class="col-6">
+                <div class="clearfix">
+                  <img
+                    id="icon"
+                    src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                    alt="Cloudy icon"
+                    class="weather-icon float-left"
+                  />
+                  <div class="float-left">
+                    <span class="temperature">19</span
+                    ><span class="units"
+                      ><a href="#" id="celsius-link">°C</a> |
+                      <a href="#" id="fahrenheit-link">°F</a></span
+                    >
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6">
-              <ul>
-                <li>Precipitation: 0%</li>
-                <li>Humidity: 77%</li>
-                <li>Wind: 8 km/h</li>
-              </ul>
+              <div class="col-6">
+                <ul>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="wind"></span> km/h</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -73,7 +78,7 @@
           >
         </small>
       </div>
-      <script src="src/index.js"></script>
+      <script src="src/script.js"></script>
     </div>
   </body>
 </html>

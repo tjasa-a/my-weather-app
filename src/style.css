@@ -53,6 +53,7 @@ li {
   top: -34px;
 }
 
-.search-form {
-  margin-bottom: 20px;
+#weather-display {
+  margin-top: 20px;
+  display: none;
 }
