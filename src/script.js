@@ -53,9 +53,10 @@ function displayForecast(response) {
           <div class="weather-forecast-date">${formatDay(
             forecastDay.time
           )}</div>
-          <img src= "${forecastDay.condition.icon_url}" alt="${
-          forecastDay.condition.icon
-        }" width="42" />
+          <img src= "${forecastDay.condition.icon_url.replace(
+            "http://",
+            "https://"
+          )}" alt="${forecastDay.condition.icon}" width="42" />
           <div class="wather-forecast-temperature">
             <span class="weather-forecast-temperature-max"> ${Math.round(
               forecastDay.temperature.maximum
