@@ -72,6 +72,9 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
 
   forecastElement.innerHTML = forecastHTML;
+
+  let displayWeather = document.querySelector("#weather-display");
+  displayWeather.style.display = "block";
 }
 
 function getForecast(coordinates) {
@@ -99,11 +102,11 @@ function displayWeather(response) {
   condition.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed * 3.6);
-  iconElement.setAttribute("src", response.data.condition.icon_url);
+  iconElement.setAttribute(
+    "src",
+    response.data.condition.icon_url.replace("http://", "https://")
+  );
   iconElement.setAttribute("alt", response.data.condition.description);
-
-  let displayWeather = document.querySelector("#weather-display");
-  displayWeather.style.display = "block";
 
   getForecast(response.data.coordinates);
 }
